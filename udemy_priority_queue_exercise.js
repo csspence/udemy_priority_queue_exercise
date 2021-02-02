@@ -26,7 +26,7 @@ class Node {
 }
 
 class PriorityQueue {
-  // constructor() {
+  constructor() {
   //   this.values = [];
   // }
 
@@ -90,7 +90,7 @@ class PriorityQueue {
   //     this.values[swap] = element;
   //     idx = swap
   //   }
-  // }
+  }
   
 }
 
