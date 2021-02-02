@@ -27,26 +27,29 @@ class Node {
 
 class PriorityQueue {
   constructor() {
-  //   this.values = [];
-  // }
+    this.values = [];
+  }
 
-  // insert(element) {
-  //   this.values.push(element);
-  //   this.bubbleUp();
-  // }
+  enqueue(value, prrty) {
+    let node = new Node;
+    node.val = value;
+    node.priority = prrty;
+    this.values.push(node);
+    this.bubbleUp();
+  }
 
-  // bubbleUp () {
-  //   let idx = this.values.length - 1;
-  //   const element = this.values[idx];
-  //   while(idx > 0) {
-  //     let parentIdx = Math.floor((idx - 1) / 2);
-  //     let parent = this.values[parentIdx];
-  //     if(element <= parent) break;
-  //     this.values[parentIdx] = element;
-  //     this.values[idx] = parent;
-  //     idx = parentIdx;
-  //   }
-  // }
+  bubbleUp () {
+    let idx = this.values.length - 1;
+    const element = this.values[idx][priority];
+    while(idx > 0) {
+      let parentIdx = Math.floor((idx - 1) / 2);
+      let parent = this.values[parentIdx][priority];
+      if(element => parent) break;
+      this.values[parentIdx] = element;
+      this.values[idx] = parent;
+      idx = parentIdx;
+    }
+  }
 
   // extractMax () {
   //   let finalIdx = this.values.length - 1;
@@ -90,17 +93,11 @@ class PriorityQueue {
   //     this.values[swap] = element;
   //     idx = swap
   //   }
-  }
+  // }
   
 }
 
-// let test = new MaxBinaryHeap;
-// test.insert(100);
-// test.insert(75);
-// test.insert(80);
-// test.insert(90);
-// test.insert(95);
-// test.insert(125);
-// console.log(test.values);
-// test.extractMax();
-// console.log(test.values);
+let test = new PriorityQueue;
+test.enqueue('ndoer', 10);
+test.enqueue('noder', 4);
+console.log(test);
