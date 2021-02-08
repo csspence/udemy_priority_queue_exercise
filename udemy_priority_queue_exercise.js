@@ -31,9 +31,9 @@ class PriorityQueue {
   }
 
   enqueue(value, prrty) {
-    let node = new Node;
-    node.val = value;
-    node.priority = prrty;
+    let node = new Node(value, prrty);
+    // this.node.val = value;
+    // this.node.priority = prrty;
     this.values.push(node);
     this.bubbleUp();
   }
@@ -98,6 +98,6 @@ class PriorityQueue {
 }
 
 let test = new PriorityQueue;
-test.enqueue('ndoer', 10);
+test.enqueue('noder', 10);
 test.enqueue('noder', 4);
 console.log(test);
