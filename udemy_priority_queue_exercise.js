@@ -19,9 +19,9 @@ It's parent is at index (n-1)/2 floored
 */
 
 class Node {
-  constructor(value, prrty) {
-    this.val = value;
-    this.priority = prrty;
+  constructor(val, priority) {
+    this.val = val;
+    this.priority = priority;
   }
 }
 
@@ -30,10 +30,8 @@ class PriorityQueue {
     this.values = [];
   }
 
-  enqueue(value, prrty) {
-    let node = new Node(value, prrty);
-    // this.node.val = value;
-    // this.node.priority = prrty;
+  enqueue(val, priority) {
+    let node = new Node(val, priority);
     this.values.push(node);
     this.bubbleUp();
   }
