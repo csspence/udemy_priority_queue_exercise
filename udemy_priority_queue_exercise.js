@@ -90,7 +90,6 @@ class PriorityQueue {
       idx = swap
     }
   }
-  
 }
 
 // let test = new PriorityQueue;
